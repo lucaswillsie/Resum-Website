@@ -106,13 +106,25 @@ to start with*/
 
 
 .pathway {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    height: 200px;
-    width: calc((200px * 3));
-    gap: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
 }
 
 .pathway > * {
     background-color: white;
+    width: 200px;
+    height: 200px;
+}
+
+.pathway a {
+    text-decoration: none;
+    text-align: center;
+}
+
+@media (max-width: 620px) {
+    .pathway > * {
+        width: 30vw;
+        height: 30vw;
+    }
 }
